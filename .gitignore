@@ -3,3 +3,5 @@ Servers
 spring.form.data/target
 spring.formtags.databinding/target
 spring.helloworld/target
+spring.orm.crud/target
+spring.form.validation
