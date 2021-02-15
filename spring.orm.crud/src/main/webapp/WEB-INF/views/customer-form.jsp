@@ -15,6 +15,8 @@
 <body>
 	<h1>Customer Form</h1>
 	<sf:form action="process-form" modelAttribute="customer">
+		<sf:hidden path="id"/>
+		
 		First Name : <sf:input path="firstName"/> <sf:errors path="firstName" cssClass="error"></sf:errors>
 		<br><br>
 		Last Name : <sf:input path="lastName"/>
