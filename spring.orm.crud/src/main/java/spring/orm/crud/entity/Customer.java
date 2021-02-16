@@ -1,5 +1,6 @@
-package spring.orm.crud;
+package spring.orm.crud.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,9 +18,14 @@ public class Customer {
 	
 	@NotEmpty(message = "First Name Required")
 	@Length(min = 3, message = "Min Length 3 Required")
+	@Column(name = "first_name")
 	private String firstName;
 	
-	private String lastName, email;
+	@NotEmpty(message = "Last Name Required")
+	@Column(name = "last_name")
+	private String lastName;
+	
+	private String email;
 	
 
 	public int getId() {

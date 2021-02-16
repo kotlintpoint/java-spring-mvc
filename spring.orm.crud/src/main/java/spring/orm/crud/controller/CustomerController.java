@@ -1,6 +1,8 @@
-package spring.orm.crud;
+package spring.orm.crud.controller;
 
 import java.util.List;
+
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -11,6 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import spring.orm.crud.dao.CustomerDaoSupport;
+import spring.orm.crud.entity.Customer;
 
 @Controller
 @RequestMapping("customer")
@@ -35,7 +40,7 @@ public class CustomerController {
 	}
 	
 	@RequestMapping("process-form")
-	public String processForm(@ModelAttribute("customer") Customer theCustomer,
+	public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer,
 			BindingResult bindingResult) {
 		if(bindingResult.hasErrors()) {
 			return "customer-form";

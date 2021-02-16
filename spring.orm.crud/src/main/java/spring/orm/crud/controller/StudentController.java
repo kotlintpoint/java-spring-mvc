@@ -1,4 +1,4 @@
-package spring.orm.crud;
+package spring.orm.crud.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,7 +11,8 @@ public class StudentController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "index";
+		//return "index";
+		return "redirect:/customer/all-customer";
 	}
 	
 	@RequestMapping("simple-form")

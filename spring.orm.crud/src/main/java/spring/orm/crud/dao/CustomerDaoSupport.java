@@ -1,9 +1,11 @@
-package spring.orm.crud;
+package spring.orm.crud.dao;
 
 import java.util.List;
 
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 import org.springframework.transaction.annotation.Transactional;
+
+import spring.orm.crud.entity.Customer;
 
 public class CustomerDaoSupport extends HibernateDaoSupport{
 

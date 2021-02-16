@@ -29,10 +29,31 @@
   background-color: #4CAF50;
   color: white;
 }
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 15px;
+  cursor: pointer;
+}
+div {
+	display:flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
 </style>
 </head>
 <body>
-	<h1>Customer List</h1>
+	<div>
+		<h1>Customer List</h1>
+		<a href="simple-form" class="button">New Customer</a>
+	</div>
 	<table id="customers">
 		 <tr>
 			    <th>ID</th>
