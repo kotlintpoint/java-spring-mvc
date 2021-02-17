@@ -13,9 +13,9 @@
 <mvc:resources mapping="/resources/**" location="classpath:/statics/"></mvc:resources>
 
 <context:annotation-config/>
-<context:component-scan base-package="spring.orm.crud"></context:component-scan>
+<context:component-scan base-package="rest.controller"></context:component-scan>
 
-<bean id="validator"
+<!-- <bean id="validator"
       class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
 
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -26,6 +26,7 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	 -->
 
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -37,7 +38,7 @@
 	
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="packagesToScan" value="spring.orm.crud"></property>
+		<property name="packagesToScan" value="rest.controller"></property>
 		
 		<property name="hibernateProperties">
 			<props>
@@ -49,13 +50,14 @@
 		</property>
 	</bean>	
 
-	<bean id="dao" class="spring.orm.crud.dao.CustomerDaoSupport" autowire="byName">
+	<bean id="dao" class="rest.controller.dao.CustomerDaoSupport" autowire="byName">
 		
 	</bean>
-	
 	<tx:annotation-driven/>
 	<bean id="transactionManager" 
 		class="org.springframework.orm.hibernate5.HibernateTransactionManager"
 		autowire="byName">		
 	</bean>
+	
+	
 </beans>
