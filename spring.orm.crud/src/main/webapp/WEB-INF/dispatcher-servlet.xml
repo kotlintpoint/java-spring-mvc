@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 <mvc:annotation-driven></mvc:annotation-driven>
-<mvc:resources location="/resources/**" mapping="classpath:/statics/"></mvc:resources>
+<mvc:resources mapping="/resources/**" location="classpath:/statics/"></mvc:resources>
 
 <context:annotation-config/>
 <context:component-scan base-package="spring.orm.crud"></context:component-scan>
